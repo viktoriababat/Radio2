@@ -35,6 +35,8 @@ public class Radio {
     public void increaseVolume() {
         if (currentVolume < 10) {
             currentVolume++;
+        } else {
+            currentVolume = 10;
         }
     }
     public void decreaseVolume() {
