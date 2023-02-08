@@ -2,6 +2,14 @@ public class Radio {
     private int currentStation;
     private int currentVolume;
 
+    public Radio() {
+
+    }
+
+    public Radio(int stationsCount) {
+
+    }
+
     public void next() {
         if (currentStation != 9) {
             currentStation++;
