@@ -90,7 +90,7 @@ public class RadioTest {
     public void turnOnNegativeVolume(){
         Radio radio = new Radio();
         radio.setCurrentVolume(-1);
-        int expected = 0;
+        int expected = 50;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -121,9 +121,9 @@ public class RadioTest {
     @Test
     public void increaseTheMaximumVolumeByOneUnit(){
         Radio radio = new Radio();
-        radio.setCurrentVolume(10);
+        radio.setCurrentVolume(100);
         radio.increaseVolume();
-        int expected = 10;
+        int expected = 100;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -183,11 +183,11 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    public void moreMaximumVolume(){
+    public void moreMaximumStation(){
         Radio radio = new Radio();
-        radio.setCurrentVolume(11);
+        radio.setCurrentStation(11);
         int expected = 0;
-        int actual = radio.getCurrentVolume();
+        int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
 
